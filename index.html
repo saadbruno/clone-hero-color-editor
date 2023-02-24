@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clone Hero Color Editor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 notes_container">
+                <div class="note_group green">
+                    <img class="note_base" src="sprites/guitar/guitarNote_Base_Strum.png">
+                    <img class="note" src="sprites/guitar/guitarNote_Body_Strum.png">
+                    <div class="note overlay" data-sprite-name="note_green"></div>
+                    <img class="note_anim" src="sprites/guitar/guitarNote_Strum_Shine12.png">
+                    <div class="note_anim overlay" data-sprite-name="note_anim_green"></div>
+                </div>
+
+                <div class="note_group red">
+                    <img class="note_base" src="sprites/guitar/guitarNote_Base_Strum.png">
+                    <img class="note" src="sprites/guitar/guitarNote_Body_Strum.png">
+                    <div class="note overlay" data-sprite-name="note_red"></div>
+                    <img class="note_anim" src="sprites/guitar/guitarNote_Strum_Shine12.png">
+                    <div class="note_anim overlay" data-sprite-name="note_anim_red"></div>
+                </div>
+
+                <div class="note_group yellow">
+                    <img class="note_base" src="sprites/guitar/guitarNote_Base_Strum.png">
+                    <img class="note" src="sprites/guitar/guitarNote_Body_Strum.png">
+                    <div class="note overlay" data-sprite-name="note_yellow"></div>
+                    <img class="note_anim" src="sprites/guitar/guitarNote_Strum_Shine12.png">
+                    <div class="note_anim overlay" data-sprite-name="note_anim_yellow"></div>
+                </div>
+
+                <div class="note_group blue">
+                    <img class="note_base" src="sprites/guitar/guitarNote_Base_Strum.png">
+                    <img class="note" src="sprites/guitar/guitarNote_Body_Strum.png">
+                    <div class="note overlay" data-sprite-name="note_blue"></div>
+                    <img class="note_anim" src="sprites/guitar/guitarNote_Strum_Shine12.png">
+                    <div class="note_anim overlay" data-sprite-name="note_anim_blue"></div>
+                </div>
+
+                <div class="note_group orange">
+                    <img class="note_base" src="sprites/guitar/guitarNote_Base_Strum.png">
+                    <img class="note" src="sprites/guitar/guitarNote_Body_Strum.png">
+                    <div class="note overlay" data-sprite-name="note_orange"></div>
+                    <img class="note_anim" src="sprites/guitar/guitarNote_Strum_Shine12.png">
+                    <div class="note_anim overlay" data-sprite-name="note_anim_orange"></div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="row">
+
+                    <!-- color pickers -->
+                    <div class="col-12 color-picker-group input-group">
+                        <input type="color" id="note_green" name="note_green">
+                        <label for="note_green">Green</label>
+                        <input type="color" id="note_anim_green" name="note_anim_green">
+                        <label for="note_anim_green">Green Detail</label>
+                    </div>
+
+                    <div class="col-12 color-picker-group input-group">
+                        <input type="color" id="note_red" name="note_red">
+                        <label for="note_red">Red</label>
+                        <input type="color" id="note_anim_red" name="note_anim_red">
+                        <label for="note_anim_red">Red Detail</label>
+                    </div>
+
+                    <div class="col-12 color-picker-group input-group">
+                        <input type="color" id="note_yellow" name="note_yellow">
+                        <label for="note_yellow">Yellow</label>
+                        <input type="color" id="note_anim_yellow" name="note_anim_yellow">
+                        <label for="note_anim_yellow">Yellow Detail</label>
+                    </div>
+
+                    <div class="col-12 color-picker-group input-group">
+                        <input type="color" id="note_blue" name="note_blue">
+                        <label for="note_blue">Blue</label>
+                        <input type="color" id="note_anim_blue" name="note_anim_blue">
+                        <label for="note_anim_blue">Blue Detail</label>
+                    </div>
+
+                    <div class="col-12 color-picker-group input-group">
+                        <input type="color" id="note_orange" name="note_orange">
+                        <label for="note_orange">Orange</label>
+                        <input type="color" id="note_anim_orange" name="note_anim_orange">
+                        <label for="note_anim_orange">Orange Detail</label>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <div class="col-12 mt-4">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Copy / Paste .ini
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div> <!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+    <footer class="text-center">Source code available on <a href="https://github.com/saadbruno/clone-hero-color-editor" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+
+    <!-- modal for copy / pasting INI data -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Copy / Paste .ini data</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="iniForm">
+                    <div class="modal-body">
+                        <textarea class="form-control font-monospace" id="iniTextBox" name="iniTextBox" rows="10"
+                            spellcheck="false"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" value="Submit" class="btn btn-primary"
+                            data-bs-dismiss="modal">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="functions.js" async defer></script>
+    <script src="script.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

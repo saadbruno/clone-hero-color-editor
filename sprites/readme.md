@@ -1,0 +1,1 @@
+Sprites taken from https://github.com/RileyTheFox/CHColorEditor

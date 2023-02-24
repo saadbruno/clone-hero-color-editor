@@ -1,0 +1,58 @@
+body {
+    background-color: #212529;
+}
+
+/* NOTES  */
+
+.notes_container {
+    pointer-events: none;
+}
+
+.overlay {
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+    mix-blend-mode: multiply;
+}
+
+.overlay.note {
+    mask-image: url(sprites/guitar/guitarNote_Body_Strum.png);
+    -webkit-mask-image: url(sprites/guitar/guitarNote_Body_Strum.png);
+}
+
+.overlay.note_anim {
+    mask-image: url(sprites/guitar/guitarNote_Strum_Shine12.png);
+    -webkit-mask-image: url(sprites/guitar/guitarNote_Strum_Shine12.png);
+}
+
+.note_group {
+    position: relative;
+    display: inline-block;
+}
+
+.note_base {
+    position: relative;
+}
+
+.note,
+.note_anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.note_anim {
+    top: -56px;
+}
+
+/* CONTROLS  */
+.color-picker-group label {
+    width: 100px;
+}
+
+/* OTHER */
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 100vw;
+}
